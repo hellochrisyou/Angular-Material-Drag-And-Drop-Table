@@ -1,0 +1,19 @@
+<button mat-raised-button id="create-button">
+    <a [routerLink]="['/edit', 'create']" routerLinkActive="active">Create</a>
+</button>
+<div id="flex-box" fxLayout="row" fxLayoutAlign="space-around start">
+    <div class="action-table" style="float:left">
+        <h3><u>Fulfillment Workflow</u></h3>
+        <div *ngFor="let workload of financeWorkflows;let i = index">
+            <div *ngIf="workload && financeWorkflows.length" class="table-title">{{workload.name}}
+                <button mat-raised-button id="edit-button"><a [routerLink]="['/edit', i]"
+                        routerLinkActive="active">Edit</a></button></div>
+                        <finance-table [dataArray]="workload.actions"></finance-table>   
+         </div>
+    </div>
+    <div class="orchestrator-action-info" style="float:right">
+        <h3><u>Orchestrator Action Information</u></h3>
+        <actions-table [dataArray]="actionsInfo"></actions-table>
+    </div>
+
+</div>
