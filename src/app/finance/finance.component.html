@@ -31,7 +31,7 @@
             <mat-expansion-panel>
                 <mat-expansion-panel-header>
                    <mat-panel-title>
-                    <span><a [routerLink]="['/edit', i]" matTooltip="Edit {{financeWorkflows[i].name}}" matTooltipPosition="above"
+                    <span matBadge="{{financeWorkflows[i].actions.length}}" matBadgeOverlap="false" matBadgePosition="after"><a [routerLink]="['/edit', i]" matTooltip="Edit {{financeWorkflows[i].name}}" matTooltipPosition="above"
                         routerLinkActive="active"><mat-icon>build</mat-icon>
                     </a></span>
                       <span id="workload-name">{{workload.name}}</span>
