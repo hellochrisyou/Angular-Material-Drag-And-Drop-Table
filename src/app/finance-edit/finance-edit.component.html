@@ -11,7 +11,7 @@
             <div cdkDropList id="editActionsList" [cdkDropListData]="thisFinanceWorkflow"
                 [cdkDropListConnectedTo]="['edit-list']" (cdkDropListDropped)="drop($event)">
                 <h3>{{name}}</h3>
-                <table class="fulfillment-table ods-table ods-table--tiny" style="margin-left:auto; margin-right:auto;">
+                <table class="mat-elevation-z7 fulfillment-table ods-table ods-table--tiny" style="margin-left:auto; margin-right:auto;">
                     <thead class="ods-table__head">
                         <tr class="ods-table__row">
                             <th scope="col" class="ods-table__header"></th>
@@ -65,11 +65,11 @@
             </ng-container>
         </span>
 
-        <span class="orchestrator-container" style="float:right">
+        <span class="orchestrator-container">
             <div cdkDropList id="edit-list" [cdkDropListData]="actionsInfo"
                 [cdkDropListConnectedTo]="['editActionsList']" (cdkDropListDropped)="drop($event)">
                 <h3>Actions Available</h3>
-                <table class="orchestrator-table ods-table ods-table--tiny"
+                <table class="mat-elevation-z7 orchestrator-table ods-table ods-table--tiny"
                     style="margin-left:auto; margin-right:auto;">
                     <thead class="ods-table__head">
                         <tr class="ods-table__row">
