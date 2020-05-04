@@ -1,5 +1,4 @@
-div.orchestrator-action-info {
-    margin-right: 5vh;
+div.orchestrator-action-info {    margin-right: 5vh;
 }
 
 div.action-table{
@@ -32,6 +31,8 @@ section {
 }
 mat-icon {
     color: gold;
+    transition: background-size 0.3s ease-out, color 0.1s 0.1s, transform 0.3s;
+
 }
 #workload-name {
     margin-left: 12vw;
@@ -42,4 +43,8 @@ button a:hover {
 }
 .edit-button:hover {
     background-color: #25313d;
+}
+
+mat-icon:hover {
+    transform: rotate(360deg) scale(1.1);
 }

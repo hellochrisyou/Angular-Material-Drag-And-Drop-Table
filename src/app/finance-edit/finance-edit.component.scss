@@ -9,9 +9,7 @@ h3 {
 	text-align: center;
 	margin-bottom: 0; 
 }
-.orchestrator-table {
-	margin-top: 0;
-}
+
 .cdk-drag-preview {
 	box-sizing: border-box;
 	border-radius: 4px;
@@ -33,29 +31,21 @@ h3 {
 	margin: 0;
 	padding: 3rem;
 }
+thead tr {
+    border-bottom: 1px solid lightgrey;
+}
 .stepper {
 	min-height: 100vh;
 }
 .cdk-drag {
+    background-color: white;
 	cursor: pointer;
 	font-size: 0.7rem;
 	position: relative;
 	padding-top: 0;
 	padding-bottom: 0;
 }
-.ods-table__cell:first-child, .ods-table__header:first-child {
-	width: 5px;
-}
-.ods-table__cell:nth-child(2), .ods-table__header:nth-child(2) {
-	width: 200px;
-}
-table.orchestrator-table .ods-table__cell:nth-child(3), table.orchestrator-table .ods-table__header:nth-child(3) {
-	width: 400px;
-}
-table.fulfillment-table .ods-table__cell:nth-child(3), table.fulfillment-table .ods-table__header:nth-child(3) {
-	width: 5px;
-	padding-left: 21px;
-}
+
 table.fulfillment-table td:nth-child(5) {
 	padding-left: 40px;
 }
@@ -118,7 +108,8 @@ section.center-flex-wrapper {
 .orchestrator-container {
 	position: absolute;
 	width: 40%;
-	margin: 0 0 0 20%;
+    margin: 0 auto;
+    margin-left: 10%;
 	text-align: center;
 }
 .mat-checkbox-ripple .mat-ripple-element,.mat-checkbox-checked.mat-accent .mat-checkbox-background {
@@ -129,6 +120,9 @@ section.center-flex-wrapper {
 }
 h5 {
 	color: crimson;
+}
+tr th {
+    padding: 1rem;
 }
 .static-text { 
 	border: black 1px solid;
@@ -164,4 +158,33 @@ button#main-back-button {
 #flex-button-wrapper {
     padding-top: 5vh;
     background-color: whitesmoke;
+}
+
+// Table Transformation
+table , table tr{
+    border-collapse: collapse;
+    background-color: white;
+  }
+  table tr {
+    // border: 0.1rem solid black; 
+  }
+  table tr td{
+      padding: 1rem;
+  }
+  .orchestrator-table {
+    margin-top: 0;
+}
+.orchestrator-table tr td:nth-child(1) {
+    width: 1rem;
+}
+.orchestrator-table tr td:nth-child(2) {
+    min-width: 15rem;
+}
+
+.orchestrator-table tr td:nth-child(3) {
+    min-width: 30rem;;
+}
+
+table.mat-table {
+    border-spacing: 0;
 }

@@ -47,7 +47,7 @@ export class FinanceEditComponent implements OnInit {
   ngOnInit(): void {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.pattern('^[A-Z]+(_[A-Z]+)*$')]
+      secondCtrl: ['', Validators.pattern('^[A-Z0-9]+(_[A-Z0-9]+)*$')]
     });
     if (this.id !== 'create') {
       this.getfinanceWorkflows();
